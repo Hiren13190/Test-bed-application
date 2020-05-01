@@ -31,8 +31,10 @@
                     </v-radio-group>
                   </v-card-text>
 
-                  <v-card-title class="py-1">Upload File</v-card-title>
-                  <v-card-title class="pt-0 body-2">You can upload or drop multiple files</v-card-title>
+                  <v-card-title class="py-1 secondary--text">Upload File</v-card-title>
+                  <v-card-title
+                    class="pt-0 secondary--text body-2"
+                  >You can upload or drop multiple files</v-card-title>
 
                   <v-card-text>
                     <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"></vue-dropzone>
@@ -52,10 +54,77 @@
                 </v-tabs>
 
                 <v-tabs-items v-model="tab">
-                  <v-tab-item v-for="item in items" :key="item.tab">
+                  <v-tab-item>
                     <v-card flat color="primary">
-                      <v-card-text>{{ item.content1}}</v-card-text>
-                      <v-card-text>{{ item.content2}}.</v-card-text>
+                      <v-card-text class="white">
+                        <v-checkbox
+                          v-model="selected"
+                          label="Network Integration Testing"
+                          value="1"
+                          hide-details
+                        ></v-checkbox>
+                        <v-checkbox
+                          v-model="selected"
+                          label="Network Traffic Testing"
+                          value="2"
+                          hide-details
+                        ></v-checkbox>
+                        <v-checkbox
+                          v-model="selected"
+                          label="Network Disruption Testing"
+                          value="3"
+                          hide-details
+                        ></v-checkbox>
+                        <v-checkbox
+                          v-model="selected"
+                          label="Network Congestion Testing"
+                          value="4"
+                          hide-details
+                        ></v-checkbox>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+
+                  <v-tab-item>
+                    <v-card flat color="primary">
+                      <v-card-text class="white">
+                        <v-checkbox
+                          v-model="selected2"
+                          label="Edge Compute Testing"
+                          value="1"
+                          hide-details
+                        ></v-checkbox>
+                        <v-checkbox
+                          v-model="selected2"
+                          label="Edge Memory Consumption Testing"
+                          value="2"
+                          hide-details
+                        ></v-checkbox>
+                        <v-checkbox
+                          v-model="selected2"
+                          label="Edge Cloud - User Equipment Integration Testing"
+                          value="3"
+                          hide-details
+                        ></v-checkbox>
+                        <v-checkbox
+                          v-model="selected2"
+                          label="Edge Cloud - User Equipment Capacity Testing"
+                          value="4"
+                          hide-details
+                        ></v-checkbox>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+
+                  <v-tab-item>
+                    <v-card flat color="primary">
+                      <v-card-text class="white"></v-card-text>
+                    </v-card>
+                  </v-tab-item>
+
+                  <v-tab-item>
+                    <v-card flat color="primary">
+                      <v-card-text class="white"></v-card-text>
                     </v-card>
                   </v-tab-item>
                 </v-tabs-items>
@@ -271,6 +340,8 @@ export default {
     return {
       tab: null,
       drawer: false,
+      selected: [],
+      selected2: [],
       date: ["2020-03-02", "2020-03-08"],
       radios: "radio-1",
       rating: 3,
