@@ -209,7 +209,13 @@
 
         <v-row>
           <v-col>
-            <v-date-picker full-width v-model="date" color="primary"></v-date-picker>
+            <v-card flat color="primary">
+              <v-card-title>Estimated Test Duration</v-card-title>
+
+              <v-card-text>
+                <v-date-picker readonly range full-width v-model="date" color="primary" no-title></v-date-picker>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
 
@@ -265,7 +271,7 @@ export default {
     return {
       tab: null,
       drawer: false,
-      date: "2018-03-02",
+      date: ["2020-03-02", "2020-03-08"],
       radios: "radio-1",
       rating: 3,
       colors: [

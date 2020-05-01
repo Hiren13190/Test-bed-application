@@ -99,10 +99,10 @@
               <v-card-title>Test Bed Locations</v-card-title>
               <v-card-text>
                 <v-row>
-                  <v-col cols="4">
+                  <v-col cols="4" class="py-0">
                     <bar-chart></bar-chart>
                   </v-col>
-                  <v-col cols="8">
+                  <v-col cols="8" class="py-0">
                     <div id="regions_div"></div>
                   </v-col>
                 </v-row>
@@ -112,7 +112,7 @@
         </v-row>
 
         <v-row>
-          <v-col cols="8">
+          <v-col cols="6">
             <v-card flat color="primary">
               <v-card-title>Network Diagram</v-card-title>
               <v-card-text>
@@ -121,11 +121,11 @@
             </v-card>
           </v-col>
 
-          <v-col cols="4">
+          <v-col cols="6">
             <v-card flat color="primary">
               <v-card-title>Testcase % Progress</v-card-title>
               <v-card-text>
-                <div id="piechart_3d"></div>
+                <div id="piechart_3d" style="height: 448px;"></div>
               </v-card-text>
             </v-card>
           </v-col>
@@ -291,5 +291,10 @@ export default {
 .v-input--selection-controls .v-input__slot > .v-label,
 .v-input--selection-controls .v-radio > .v-label {
   margin-bottom: 0;
+}
+.v-card__title {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 </style>
