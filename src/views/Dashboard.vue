@@ -1,23 +1,23 @@
 <template>
   <v-container style="max-width:100%;background-color:#F4F5F9;" class="py-0">
     <v-row>
+      <v-col>
+        <v-toolbar flat color="primary">
+          <v-app-bar-nav-icon class="hidden-sm-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+          <v-btn
+            depressed
+            color="secondary"
+            class="mr-4 hidden-xs-only"
+            v-for="(item, index) in headers"
+            :key="index"
+          >{{item}}</v-btn>
+        </v-toolbar>
+      </v-col>
+    </v-row>
+
+    <v-row>
       <v-col cols="12" sm="6" md="7" lg="8" class="py-0">
-        <v-row>
-          <v-col>
-            <v-toolbar flat color="primary">
-              <v-app-bar-nav-icon class="hidden-sm-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-              <v-btn
-                depressed
-                color="secondary"
-                class="mr-4 hidden-xs-only"
-                v-for="(item, index) in headers"
-                :key="index"
-              >{{item}}</v-btn>
-            </v-toolbar>
-          </v-col>
-        </v-row>
-
         <v-row>
           <v-col>
             <v-card flat color="primary">
