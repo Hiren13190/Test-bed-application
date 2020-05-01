@@ -1,5 +1,5 @@
 <template>
-  <base-header type="gradient-info" class="pt-5 pt-md-8">
+  <base-header class="bg-gradient-info pt-5 pt-md-8">
     <!-- Card stats -->
     <div class="row mt-10 mb-10">
       <div class="col-xl-3 col-lg-3">
