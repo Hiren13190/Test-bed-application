@@ -15,7 +15,9 @@
 <script>
 export default {
   name: "page-visits-table",
-  data() {}
+  data() {
+    return {};
+  }
 };
 </script>
 <style scoped>

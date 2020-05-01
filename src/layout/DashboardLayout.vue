@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-    <side-bar :background-color="sidebarBackground" short-title="innovate5g" title="innovate5g">
+    <!-- <side-bar :background-color="'primary'" short-title="innovate5g" title="innovate5g">
       <template slot="links">
         <sidebar-item
           :link="{
@@ -27,7 +27,7 @@
           :link="{ name: 'Admin (Add Test Bed)', icon: 'ni ni-fat-add text-primary', path: '/admin-add-test-bed' }"
         />
       </template>
-    </side-bar>
+    </side-bar>-->
     <div class="main-content" :data="sidebarBackground">
       <dashboard-navbar></dashboard-navbar>
       <div @click="toggleSidebar">
