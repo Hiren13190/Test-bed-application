@@ -6,7 +6,7 @@
         <stats-card
           title="Network Bandwidth consumed"
           type="gradient-red"
-          sub-title="800mbps"
+          sub-title="460 Mbps"
           icon="ni ni-active-40"
           class="mb-4 mb-xl-0"
         >
@@ -22,7 +22,7 @@
         <stats-card
           title="Latency measurements"
           type="gradient-orange"
-          sub-title="300ms"
+          sub-title="40 ms"
           icon="ni ni-time-alarm"
           class="mb-4 mb-xl-0"
         >
@@ -38,7 +38,7 @@
         <stats-card
           title="Round Trip Time"
           type="gradient-green"
-          sub-title="4m:35s"
+          sub-title="80 ms"
           icon="ni ni-watch-time"
           class="mb-4 mb-xl-0"
         >
@@ -54,7 +54,7 @@
         <stats-card
           title="No. of connections to network tested"
           type="gradient-info"
-          sub-title="49,65%"
+          sub-title="20,000"
           icon="ni ni-chart-bar-32"
           class="mb-4 mb-xl-0"
         >

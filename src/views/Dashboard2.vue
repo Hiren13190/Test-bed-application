@@ -27,7 +27,7 @@
                     <stats-card
                       title="Network Bandwidth consumed"
                       type="gradient-red"
-                      sub-title="800mbps"
+                      sub-title="460 Mbps"
                       icon="ni ni-active-40"
                     >
                       <template slot="footer">
@@ -43,7 +43,7 @@
                     <stats-card
                       title="Latency measurements"
                       type="gradient-orange"
-                      sub-title="300ms"
+                      sub-title="40 ms"
                       icon="ni ni-time-alarm"
                     >
                       <template slot="footer">
@@ -59,7 +59,7 @@
                     <stats-card
                       title="Round Trip Time"
                       type="gradient-green"
-                      sub-title="4m:35s"
+                      sub-title="80 ms"
                       icon="ni ni-watch-time"
                       style="height:100%;"
                     >
@@ -76,7 +76,7 @@
                     <stats-card
                       title="No. of connections to network tested"
                       type="gradient-info"
-                      sub-title="49,65%"
+                      sub-title="20,000"
                       icon="ni ni-chart-bar-32"
                     >
                       <template slot="footer">
@@ -247,12 +247,7 @@ export default {
     function drawRegionsMap() {
       var data = window.google.visualization.arrayToDataTable([
         ["Country", "Test Beds"],
-        ["Germany", 200],
-        ["United States", 300],
-        ["Brazil", 400],
-        ["Canada", 500],
-        ["France", 600],
-        ["Australia", 700]
+        ["United States", 3]
       ]);
 
       var options = {};

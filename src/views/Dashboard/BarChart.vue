@@ -11,12 +11,7 @@ export default {
     function drawBasic() {
       var data = google.visualization.arrayToDataTable([
         ["Country", "TestBeds"],
-        ["Germany", 200],
-        ["United States", 300],
-        ["Brazil", 400],
-        ["Canada", 500],
-        ["France", 600],
-        ["Australia", 700]
+        ["United States", 3]
       ]);
 
       var options = {

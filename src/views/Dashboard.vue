@@ -135,18 +135,20 @@
 
         <v-row>
           <v-col cols="12" sm="12" md="12" lg="4">
-            <v-card class="mx-auto" max-width="375" height="100%" :to="{ path: '/test-dashboard' }">
-              <v-img src="@/assets/download.jpeg" height="200px"></v-img>
+            <a href="dashboard2">
+              <v-card class="mx-auto" max-width="375" height="100%">
+                <v-img src="@/assets/download.jpeg" height="200px"></v-img>
 
-              <v-card-title class="card-title">Testcase Dashboard</v-card-title>
+                <v-card-title class="card-title">Testcase Dashboard</v-card-title>
 
-              <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
+                <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
 
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="purple" text>Click Here</v-btn>
-              </v-card-actions>
-            </v-card>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="purple" text>Click Here</v-btn>
+                </v-card-actions>
+              </v-card>
+            </a>
           </v-col>
 
           <v-col cols="12" sm="12" md="12" lg="8">
@@ -265,7 +267,7 @@
                         <v-list-item-title class="title">Marcus Obrien</v-list-item-title>
                         <v-list-item-subtitle>Network Engineer</v-list-item-subtitle>
                         <v-list-item-subtitle>
-                          <a href="mailto:test@example.com">test@example.com</a>
+                          <a href="mailto:Derek.Ladd@innovate5g.com">Derek.Ladd@innovate5g.com</a>
                         </v-list-item-subtitle>
                       </v-list-item-content>
                     </v-list-item>
@@ -371,15 +373,14 @@ export default {
         { tab: "Content Testing", content1: "", content2: "" }
       ],
       buttons: [
-        "Gallery",
-        "Profile",
-        "Message",
-        "Search",
-        "NO",
-        "Yes",
-        "Info",
-        "Blog",
-        "Chat"
+        "Latency",
+        "Bandwidth",
+        "Connections",
+        "M2M",
+        "Speed",
+        "Responsiveness",
+        "Memory",
+        "Edge Compute Time"
       ],
       YearList: ["2020", "2021", "2022", "2023", "2024"],
       MonthList: [
