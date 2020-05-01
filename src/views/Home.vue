@@ -5,10 +5,15 @@
         <v-row>
           <v-col>
             <v-toolbar flat color="primary">
-              <v-btn depressed color="secondary" class="mr-4">Home</v-btn>
-              <v-btn depressed color="secondary" class="mr-4">Services</v-btn>
-              <v-btn depressed color="secondary" class="mr-4">Portfolio</v-btn>
-              <v-btn depressed color="secondary" class="mr-4">SANDBOX</v-btn>
+              <v-app-bar-nav-icon class="hidden-sm-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+              <v-btn
+                depressed
+                color="secondary"
+                class="mr-4 hidden-xs-only"
+                v-for="(item, index) in headers"
+                :key="index"
+              >{{item}}</v-btn>
             </v-toolbar>
           </v-col>
         </v-row>
@@ -60,14 +65,14 @@
         </v-row>
 
         <v-row>
-          <v-col cols="12" sm="12" md="12" lg="7">
+          <v-col cols="12" sm="12" md="12" lg="6">
             <v-card flat color="primary" style="height: 100%;" :to="{ name: 'dashboard' }">
               <v-card-title>Test Dashboard</v-card-title>
               <v-card-text></v-card-text>
             </v-card>
           </v-col>
 
-          <v-col cols="12" sm="12" md="12" lg="5">
+          <v-col cols="12" sm="12" md="12" lg="6">
             <v-card flat color="primary">
               <v-card-title>
                 Payment details
@@ -103,7 +108,7 @@
                 />
 
                 <v-row>
-                  <v-col cols="12" sm="4" class="pr-1 py-0">
+                  <v-col cols="12" sm="5" class="py-0">
                     <v-select
                       solo
                       flat
@@ -115,7 +120,7 @@
                       required
                     />
                   </v-col>
-                  <v-col cols="12" sm="4" class="px-1 py-0">
+                  <v-col cols="12" sm="4" class="py-0">
                     <v-select
                       solo
                       flat
@@ -127,7 +132,7 @@
                       required
                     />
                   </v-col>
-                  <v-col cols="12" sm="4" class="pl-1 py-0">
+                  <v-col cols="12" sm="3" class="py-0">
                     <v-text-field
                       solo
                       flat
@@ -237,6 +242,37 @@
         </v-row>
       </v-col>
     </v-row>
+
+    <v-navigation-drawer color="primary" v-model="drawer" absolute style="height: 100vh;">
+      <v-list>
+        <v-list-item two-line>
+          <v-list-item-avatar>
+            <img src="https://randomuser.me/api/portraits/men/81.jpg" />
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>Application</v-list-item-title>
+            <v-list-item-subtitle>Subtext</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item v-for="item in headers" :key="item" link>
+          <!-- <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>-->
+
+          <v-list-item-content>
+            <v-list-item-title class="white--text">{{ item }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn block>Logout</v-btn>
+        </div>
+      </template>
+    </v-navigation-drawer>
   </v-container>
 </template>
 
@@ -250,6 +286,7 @@ export default {
   data() {
     return {
       tab: null,
+      drawer: false,
       date: "2018-03-02",
       radios: "radio-1",
       rating: 3,
@@ -260,6 +297,7 @@ export default {
         "red lighten-1",
         "deep-purple accent-4"
       ],
+      headers: ["Home", "Services", "Portfolio", "Sandbox"],
       slides: ["First", "Second", "Third", "Fourth", "Fifth"],
       items: [
         { tab: "Network Testing", content: "Tab 1 Content" },
@@ -278,7 +316,7 @@ export default {
         "Blog",
         "Chat"
       ],
-      YearList: ["2030", "2029", "2028", "2017", "whatever"],
+      YearList: ["2020", "2021", "2022", "2023", "2024"],
       MonthList: [
         "January",
         "February",
