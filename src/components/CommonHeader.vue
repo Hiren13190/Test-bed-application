@@ -4,9 +4,9 @@
     <div class="row mt-10 mb-10">
       <div class="col-xl-3 col-lg-3">
         <stats-card
-          title="##?##"
+          title="Network Bandwidth consumed"
           type="gradient-red"
-          sub-title="350,897"
+          sub-title="800mbps"
           icon="ni ni-active-40"
           class="mb-4 mb-xl-0"
         >
@@ -20,10 +20,10 @@
       </div>
       <div class="col-xl-3 col-lg-3">
         <stats-card
-          title="##?##"
+          title="Latency measurements"
           type="gradient-orange"
-          sub-title="2,356"
-          icon="ni ni-chart-pie-35"
+          sub-title="300ms"
+          icon="ni ni-time-alarm"
           class="mb-4 mb-xl-0"
         >
           <template slot="footer">
@@ -36,10 +36,10 @@
       </div>
       <div class="col-xl-3 col-lg-3">
         <stats-card
-          title="##?##"
+          title="Round Trip Time"
           type="gradient-green"
-          sub-title="924"
-          icon="ni ni-money-coins"
+          sub-title="4m:35s"
+          icon="ni ni-watch-time"
           class="mb-4 mb-xl-0"
         >
           <template slot="footer">
@@ -52,7 +52,7 @@
       </div>
       <div class="col-xl-3 col-lg-3">
         <stats-card
-          title="##?##"
+          title="No. of connections to network tested"
           type="gradient-info"
           sub-title="49,65%"
           icon="ni ni-chart-bar-32"

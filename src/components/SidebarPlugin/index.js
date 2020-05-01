@@ -5,10 +5,10 @@ const SidebarStore = {
   showSidebar: false,
   sidebarLinks: [],
   isMinimized: false,
-  displaySidebar(value) {
+  displaySidebar (value) {
     this.showSidebar = value;
   },
-  toggleMinimize() {
+  toggleMinimize () {
     document.body.classList.toggle('sidebar-mini');
     // we simulate the window Resize so the charts will get updated in realtime.
     const simulateWindowResize = setInterval(() => {
@@ -25,7 +25,7 @@ const SidebarStore = {
 };
 
 const SidebarPlugin = {
-  install(Vue, options) {
+  install (Vue, options) {
     if (options && options.sidebarLinks) {
       SidebarStore.sidebarLinks = options.sidebarLinks;
     }
@@ -35,7 +35,7 @@ const SidebarPlugin = {
       }
     });
     Vue.prototype.$sidebar = app.sidebarStore;
-    Vue.component('side-bar', Sidebar);
+    // Vue.component('side-bar', Sidebar);
     Vue.component('sidebar-item', SidebarItem);
   }
 };
