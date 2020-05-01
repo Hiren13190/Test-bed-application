@@ -54,8 +54,8 @@
                 <v-tabs-items v-model="tab">
                   <v-tab-item v-for="item in items" :key="item.tab">
                     <v-card flat color="primary">
-                      <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
-                      <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
+                      <v-card-text>{{ item.content1}}</v-card-text>
+                      <v-card-text>{{ item.content2}}.</v-card-text>
                     </v-card>
                   </v-tab-item>
                 </v-tabs-items>
@@ -69,7 +69,7 @@
             <v-card class="mx-auto" max-width="375" height="100%" :to="{ path: '/test-dashboard' }">
               <v-img src="@/assets/download.jpeg" height="200px"></v-img>
 
-              <v-card-title>Test Dashboard Access</v-card-title>
+              <v-card-title class="card-title">Testcase Dashboard</v-card-title>
 
               <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
 
@@ -157,33 +157,6 @@
             </v-card>
           </v-col>
         </v-row>
-
-        <v-row>
-          <v-col>
-            <v-card flat color="primary">
-              <v-card-title>Testbed History</v-card-title>
-
-              <v-card-text>
-                <v-row>
-                  <v-col cols="12" sm="6" md="6" lg="3" v-for="item in 4" :key="item">
-                    <v-card flat>
-                      <v-img height="100px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
-
-                      <v-card-subtitle>Number 10</v-card-subtitle>
-
-                      <v-card-text class="caption">
-                        <div>Whitehaven Beach</div>
-
-                        <div>Whitsunday Island, Whitsunday Islands</div>
-                        <v-rating dense v-model="rating"></v-rating>
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                </v-row>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
       </v-col>
 
       <v-col cols="12" sm="6" md="5" lg="4" class="py-0">
@@ -192,7 +165,7 @@
             <v-card flat color="primary">
               <v-card-text>
                 <v-text-field solo flat placeholder="Your email address..."></v-text-field>
-                <v-btn block depressed color="secondary">Subscibe</v-btn>
+                <v-btn block depressed color="secondary">Subscribe</v-btn>
               </v-card-text>
             </v-card>
           </v-col>
@@ -224,9 +197,6 @@
                         <v-list-item-subtitle>Network Engineer</v-list-item-subtitle>
                         <v-list-item-subtitle>
                           <a href="mailto:test@example.com">test@example.com</a>
-                        </v-list-item-subtitle>
-                        <v-list-item-subtitle>
-                          <a href="tel:+91 9999999999">+91 999 9999 999</a>
                         </v-list-item-subtitle>
                       </v-list-item-content>
                     </v-list-item>
@@ -308,10 +278,20 @@ export default {
       headers: ["Home", "Services", "Portfolio", "Sandbox"],
       slides: ["First", "Second", "Third", "Fourth", "Fifth"],
       items: [
-        { tab: "Network Testing", content: "Tab 1 Content" },
-        { tab: "Edge Cloud Testing", content: "Tab 2 Content" },
-        { tab: "User Equipment Emulation", content: "Tab 3 Content" },
-        { tab: "Content Testing", content: "Tab 4 Content" }
+        {
+          tab: "Network Testing",
+          content1:
+            "Measure the response time of a device to an invite request for session initiation",
+          content2:
+            "Ensure that network has sustain high loads and still remain operational"
+        },
+        { tab: "Edge Cloud Testing", content1: "", content2: "" },
+        {
+          tab: "User Equipment Emulation",
+          content1: "",
+          content2: ""
+        },
+        { tab: "Content Testing", content1: "", content2: "" }
       ],
       buttons: [
         "Gallery",
@@ -361,5 +341,24 @@ export default {
 .v-input--selection-controls .v-input__slot > .v-label,
 .v-input--selection-controls .v-radio > .v-label {
   margin-bottom: 0;
+}
+.v-card__title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: black;
+}
+.v-tab {
+  font-weight: bold;
+  font-size: 18px;
+}
+.v-card__text {
+  font-size: 17px;
 }
 </style>
