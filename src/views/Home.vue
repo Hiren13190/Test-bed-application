@@ -1,7 +1,7 @@
 <template>
   <v-container style="max-width:100%;background-color:#F4F5F9;" class="py-0">
     <v-row>
-      <v-col cols="12" sm="8" class="py-0">
+      <v-col cols="12" sm="6" md="7" lg="8" class="py-0">
         <v-row>
           <v-col>
             <v-toolbar flat color="primary">
@@ -178,7 +178,7 @@
         </v-row>
       </v-col>
 
-      <v-col cols="12" sm="4" class="py-0">
+      <v-col cols="12" sm="6" md="5" lg="4" class="py-0">
         <v-row>
           <v-col>
             <v-card flat color="primary">
