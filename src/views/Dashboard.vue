@@ -65,14 +65,22 @@
         </v-row>
 
         <v-row>
-          <v-col cols="12" sm="12" md="12" lg="6">
-            <v-card flat color="primary" style="height: 100%;" :to="{ path: '/test-dashboard' }">
-              <v-card-title>Test Dashboard</v-card-title>
-              <v-card-text>You can find testbed count and other details on Test Dashboard.</v-card-text>
+          <v-col cols="12" sm="12" md="12" lg="4">
+            <v-card class="mx-auto" max-width="375" height="100%" :to="{ path: '/test-dashboard' }">
+              <v-img src="@/assets/download.jpeg" height="200px"></v-img>
+
+              <v-card-title>Test Dashboard Access</v-card-title>
+
+              <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="purple" text>Click Here</v-btn>
+              </v-card-actions>
             </v-card>
           </v-col>
 
-          <v-col cols="12" sm="12" md="12" lg="6">
+          <v-col cols="12" sm="12" md="12" lg="8">
             <v-card flat color="primary">
               <v-card-title>
                 Payment details
@@ -243,7 +251,7 @@
       </v-col>
     </v-row>
 
-    <v-navigation-drawer color="primary" v-model="drawer" absolute style="height: 100vh;">
+    <v-navigation-drawer class="bg-gradient-info" v-model="drawer" absolute style="height: 100vh;">
       <v-list>
         <v-list-item two-line>
           <v-list-item-avatar>
