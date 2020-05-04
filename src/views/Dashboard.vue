@@ -135,20 +135,18 @@
 
         <v-row>
           <v-col cols="12" sm="12" md="12" lg="4">
-            <a href="dashboard2">
-              <v-card class="mx-auto" max-width="375" height="100%">
-                <v-img src="@/assets/download.jpeg" height="200px"></v-img>
+            <v-card class="mx-auto" max-width="375" height="100%" :to="{ path: '/dashboard2' }">
+              <v-img src="@/assets/download.jpeg" height="200px"></v-img>
 
-                <v-card-title class="card-title-cls">Testcase Dashboard</v-card-title>
+              <v-card-title class="card-title-cls">Testcase Dashboard</v-card-title>
 
-                <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
+              <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
 
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn color="black" text>Click Here</v-btn>
-                </v-card-actions>
-              </v-card>
-            </a>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="black" text>Click Here</v-btn>
+              </v-card-actions>
+            </v-card>
           </v-col>
 
           <v-col cols="12" sm="12" md="12" lg="8">
