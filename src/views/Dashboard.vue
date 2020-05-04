@@ -139,13 +139,13 @@
               <v-card class="mx-auto" max-width="375" height="100%">
                 <v-img src="@/assets/download.jpeg" height="200px"></v-img>
 
-                <v-card-title class="card-title">Testcase Dashboard</v-card-title>
+                <v-card-title class="card-title-cls">Testcase Dashboard</v-card-title>
 
                 <v-card-subtitle>You can find testbed count and other details on Test Dashboard</v-card-subtitle>
 
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="purple" text>Click Here</v-btn>
+                  <v-btn color="black" text>Click Here</v-btn>
                 </v-card-actions>
               </v-card>
             </a>
@@ -415,7 +415,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .v-input--selection-controls .v-input__slot > .v-label,
 .v-input--selection-controls .v-radio > .v-label {
   margin-bottom: 0;
@@ -426,12 +426,13 @@ export default {
   font-size: 25px;
   text-transform: uppercase;
 }
-.card-title {
-  font-weight: bold;
+.card-title-cls {
+  :bold ;
   font-size: 22px;
   text-transform: uppercase;
-  color: black;
+  color: black !important;
 }
+
 .v-tab {
   font-weight: bold;
   font-size: 18px;

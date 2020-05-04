@@ -29,6 +29,7 @@
                       type="gradient-red"
                       sub-title="460 Mbps"
                       icon="ni ni-active-40"
+                      class="metric-title"
                     >
                       <template slot="footer">
                         <span class="text-success mr-2">
@@ -45,6 +46,7 @@
                       type="gradient-orange"
                       sub-title="40 ms"
                       icon="ni ni-time-alarm"
+                      class="metric-title"
                     >
                       <template slot="footer">
                         <span class="text-success mr-2">
@@ -62,6 +64,7 @@
                       sub-title="80 ms"
                       icon="ni ni-watch-time"
                       style="height:100%;"
+                      class="metric-title"
                     >
                       <template slot="footer">
                         <span class="text-danger mr-2">
@@ -78,6 +81,7 @@
                       type="gradient-info"
                       sub-title="20,000"
                       icon="ni ni-chart-bar-32"
+                      class="metric-title"
                     >
                       <template slot="footer">
                         <span class="text-success mr-2">
@@ -290,6 +294,12 @@ export default {
 .v-card__title {
   color: #fff;
   font-weight: bold;
+  text-transform: uppercase;
+}
+.metric-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
   text-transform: uppercase;
 }
 </style>
